@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background-color: rgb(243, 240, 240);
+    height: 100vh;
+}
+
+/* ---------------- nav ---------------- */
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 8px 50px;
+    background-color: rgb(19, 20, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    scale: 1.3;
+}
+
+nav .nav-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: rgb(34, 20, 235);
+}
+/*---------------------- slider -------------------- */
+
+#products {
+    padding: 120px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.desc{
+    margin-bottom: 50px;
+}
+
+/* responsiveness */
+@media screen and (max-width: 1000px) {
+    nav .nav-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #products {
+        padding: 120px 20px;
+    }
+    .product {
+        width: 250px;
+    }
+    .product-image {
+        width: 250px;
+        height: 250px;
+    }
+    .product-desc h3 {
+        font-size: 15px;
+    }
+    .product-desc p {
+        font-size: 13px;
+    }
+    .add-to-cart>button {
+        font-size: 13px;
+    }
+    .change-quantity .decrease,
+    .change-quantity .increase,
+    .change-quantity input {
+        font-size: 14px;
+    }
+    .cart-container {
+        width: 100%;
+        height: 100%;
+    }
+    .products-container {
+        width: 100%;
+    }
+    .products-container .title {
+        font-size: 15px;
+    }
+    .products-container .checkout {
+        margin-top: 10px;
+    }
+    .products-container .product-container {
+        max-height: 200px;
+    }
+    .product-container .cart-product {
+        margin-bottom: 10px;
+    }
+    #notify {
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cart-product h3 {
+        font-size: 16px;
+    }
+    .product-container {
+        gap: 15px;
+    }
+    .remove-from-cart {
+        font-size: 18px;
+        background-color: transparent;
+    }
+}
+
+/* footer */
+.footer{
+    background-color: black;
+    width: 100%;
+    padding: 0em 1em;
+}
+
+.row {
+    padding: 1em 1em;
+}
+.row.primary {
+    display: grid;
+    grid-template-columns: 3fr 2fr 4fr;
+    align-items: stretch;
+}
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+}
+h3 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.4em;
+    white-space: nowrap;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+li:not(:first-child) {
+    margin-top: 0.8em;
+}
+ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+}
+ul li a:hover {
+    color: #c7940a;
+}
+.about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+}
+input,
+button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+button {
+    background-color: #c7940a;
+    color: #ffffff;
+}
+div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+.social i {
+    color: #bac6d9;
+}
+
+.copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.footer-menu{
+    float: left;
+      margin-top: 10px;
+}
+.footer-menu a{
+    color: #cfd2d6;
+    padding: 6px;
+    text-decoration: none;
+}
+.footer-menu a:hover, .social i:hover{
+    color: #c7940a;
+}
+.copyright p {
+    font-size: 0.9em;
+    text-align: center;
+    color: white;
+}
+@media screen and (max-width: 850px) {
+    .row.primary {
+      grid-template-columns: 1fr;
+    }
+}
